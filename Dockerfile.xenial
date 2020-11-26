@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Simone Riggi "simone.riggi@gmail.com"
 
 # - Install packages
-RUN apt-get install gnupg wget
+RUN apt-get update && apt-get --no-install-recommends install -y apt-utils gnupg wget
 
 # - Import MongoDB public GPG key
 RUN wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
