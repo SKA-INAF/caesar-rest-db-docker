@@ -6,7 +6,7 @@ MAINTAINER Simone Riggi "simone.riggi@gmail.com"
 ##RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
 # - Install packages
-RUN apt-get update && apt-get --no-install-recommends install -y dialog apt-utils apt-transport-https ca-certificates gnupg wget libcurl3 openssl systemd
+RUN apt-get update && apt-get --no-install-recommends install -y dialog apt-utils apt-transport-https ca-certificates gnupg wget libcurl3 openssl systemd netcat iputils-ping nmap
 
 # - Import MongoDB public GPG key
 #RUN wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
